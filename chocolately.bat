@@ -10,26 +10,26 @@ echo "Script needs to run in admin mode"
 ECHO.
 :MENU
 ECHO ...............................................
-ECHO PRESS 1, 2, p 3 OR 4 to select your task, or 5 to EXIT.
-ECHO FIRST TIME press 3!
+ECHO PRESS 1 thru 5 to select your task, or 6 to EXIT.
+ECHO FIRST TIME press 4 to install choco!
 ECHO ...............................................
 ECHO.
-ECHO 1 - Basic Apps
-ECHO 2 - Dev Apps
-ECHO 3 - User/Work Apps Only
+ECHO 1 - Basic Apps (chrome, vscode, git)
+ECHO 2 - Dev Apps (python, nodejs)
+ECHO 3 - User/Work Apps Only (1password, spotify)
 ECHO 4 - Chocolatey
 ECHO 5 - Upgrade apps
-ECHO e - EXIT
+ECHO 6 - EXIT
 ECHO.
 
 
-SET /P M=Type 1, 2, 3, or 4 then press ENTER:
+SET /P M=Type 1 thru 6 then press ENTER:
 IF %M%==1 GOTO GEN
 IF %M%==2 GOTO DEV
 IF %M%==3 GOTO PER
 IF %M%==4 GOTO FIR
 IF %M%==5 GOTO UPG
-IF %M%==e GOTO EOF
+IF %M%==6 GOTO EOF
 
 
 REM developer tools
