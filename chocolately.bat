@@ -1,6 +1,7 @@
 @echo off
 CLS
-set currentpath=%cd%
+set currentpath=D:\temp\_installers\choco-autoinstaller
+
 echo "original script from: https://gitlab.com/luukgrefte/choco-autoinstalller/"
 echo "Starting automatic file installation by chocolatey"
 echo "Script made by Luukgr"
@@ -14,21 +15,21 @@ ECHO FIRST TIME press 3!
 ECHO ...............................................
 ECHO.
 ECHO 1 - Basic Apps
-ECHO 2 - Basic + Dev Apps
-ECHO p - User/Work Apps Only
-ECHO 3 - Chocolatey
-ECHO 4 - Upgrade apps
-ECHO 5 - EXIT
+ECHO 2 - Dev Apps
+ECHO 3 - User/Work Apps Only
+ECHO 4 - Chocolatey
+ECHO 5 - Upgrade apps
+ECHO e - EXIT
 ECHO.
 
 
 SET /P M=Type 1, 2, 3, or 4 then press ENTER:
 IF %M%==1 GOTO GEN
-IF %M%==2 GOTO GEN
-IF %M%==p GOTO PER
-IF %M%==3 GOTO FIR
-IF %M%==4 GOTO UPG
-IF %M%==5 GOTO EOF
+IF %M%==2 GOTO DEV
+IF %M%==3 GOTO PER
+IF %M%==4 GOTO FIR
+IF %M%==5 GOTO UPG
+IF %M%==e GOTO EOF
 
 
 REM developer tools
